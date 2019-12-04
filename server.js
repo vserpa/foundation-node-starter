@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const requireDir = require("require-dir")
 
 // start app
 const app = express();
@@ -10,8 +11,8 @@ mongoose.connect("mongodb://localhost:27017/nodeapi", {
   useUnifiedTopology: true 
 });
 
-// import a mongo model
-require('./src/models/Product');
+// import all mongo models
+requireDir('./src/models');
 
 // first route
 app.get("/", (req, res) => {
