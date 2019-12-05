@@ -9,7 +9,8 @@ app.use(express.json());
 // start database
 mongoose.connect("mongodb://localhost:27017/nodeapi", {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 });
 
 // import all mongo models
