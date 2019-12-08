@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors1");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const requireDir = require("require-dir");
 
